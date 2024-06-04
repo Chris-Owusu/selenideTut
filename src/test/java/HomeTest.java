@@ -7,13 +7,12 @@ import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Condition.*;
-import static java.lang.Integer.parseInt;
 import static org.testng.Assert.*;
 
 public class HomeTest {
 
     @Test
-    public void userCanLoginByUsername() {
+    public void sauceDemoWithSelenide() {
 
 //        Configuration.browser = "firefox";
         Configuration.browserSize = "1443x984";
@@ -47,7 +46,7 @@ public class HomeTest {
         $(By.id("postal-code")).setValue("123212");
         $(By.id("continue")).click();
 
-        assertEquals(WebDriverRunner.url().contains("checkout-step-two.html"), true);
+        assertTrue(WebDriverRunner.url().contains("checkout-step-two.html"));
 
         ElementsCollection prices =  $$(By.cssSelector(".inventory_item_price"));
 
@@ -76,7 +75,6 @@ public class HomeTest {
         $(By.className("title")).shouldHave(text("Checkout: Complete!"));
         $(By.className("complete-header")).shouldHave(exactText("Thank you for your order!"));
         $(By.id("back-to-products")).shouldBe(visible);
-
 
         // TearDown
         System.out.println("Text is over.....");

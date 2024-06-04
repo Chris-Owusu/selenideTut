@@ -24,8 +24,6 @@ public class FileForm {
 //        $(title()).shouldHave(exactText("Form Fields | Practice Automation"));
         assertTrue(WebDriverRunner.url().contains("form-fields/"));
 
-//        JavascriptExecutor js = new JavascriptExecutor(driver);
-
         $("#name").val("Vick");
         $("label[for='drink1']").click();
         $("label[for='drink4']").click();

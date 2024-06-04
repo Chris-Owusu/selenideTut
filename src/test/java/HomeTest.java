@@ -26,7 +26,7 @@ public class HomeTest {
 
         // Login
         $(By.cssSelector("#user-name")).setValue("standard_user");
-        $(By.id("password")).setValue("secret_sauce");
+        $(By.id("password")).val("secret_sauce");
         $(By.xpath("//input[@id='login-button']")).click();
 
         assertEquals(WebDriverRunner.url().contains("inventory.html"), true);
@@ -72,13 +72,12 @@ public class HomeTest {
         $(By.id("finish")).click();
 
         // Post checkout assertions
-        $(By.className("title")).shouldHave(text("Checkout: Complete!"));
+        $(".title").shouldHave(text("Checkout: Complete!"));
         $(By.className("complete-header")).shouldHave(exactText("Thank you for your order!"));
         $(By.id("back-to-products")).shouldBe(visible);
 
         // TearDown
         System.out.println("Text is over.....");
-
     }
 
 }

@@ -16,7 +16,10 @@ public class HomeTest {
     public void userCanLoginByUsername() {
 
 //        Configuration.browser = "firefox";
-//        Configuration.browserSize = "1920x1080";
+        Configuration.browserSize = "1443x984";
+
+        //SetUp
+        System.out.println("Text is starting....");
 
         // Visit Sauce demo page
         open("https://saucedemo.com/");
@@ -59,12 +62,24 @@ public class HomeTest {
         }
        System.out.println("The sum is: " + sum);
 
+        // Check if price matches
         double tax = 1.92;
         SelenideElement totalPrice = $(By.cssSelector(".summary_total_label"));
         double totalIntPrice = Double.parseDouble(totalPrice.text().replace("Total: $", ""));
         System.out.println("Total int price: " + totalIntPrice);
 
         assertEquals(sum + tax, totalIntPrice);
+
+        $(By.id("finish")).click();
+
+        // Post checkout assertions
+        $(By.className("title")).shouldHave(text("Checkout: Complete!"));
+        $(By.className("complete-header")).shouldHave(exactText("Thank you for your order!"));
+        $(By.id("back-to-products")).shouldBe(visible);
+
+
+        // TearDown
+        System.out.println("Text is over.....");
 
     }
 

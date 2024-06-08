@@ -13,7 +13,7 @@ public class BaseTest {
     public void setUp() {
         // Configure browser settings
         Configuration.browser = "chrome";
-        Configuration.browserSize = "1920x1080";
+//        Configuration.browserSize = "1920x1080";
         Configuration.timeout = 10000;
 
         // Open the base URL before each test

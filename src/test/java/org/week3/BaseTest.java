@@ -27,5 +27,7 @@ public class BaseTest {
         clearBrowserLocalStorage();
         closeWebDriver();
     }
+
+    // To run the test on multiple browsers use this:  mvn test -D Selenide.browser={name of browser you want to use} -D test={name of test you want to run}
 }
 

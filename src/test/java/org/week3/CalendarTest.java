@@ -12,7 +12,6 @@ public class CalendarTest extends BaseTest {
 
     @Test
     public void calendarTest() {
-        assertEquals(WebDriverRunner.url(), "https://practice-automation.com/");
         calendarPage.calendarBtn().click();
         assertTrue(WebDriverRunner.url().contains("calendars/"));
         calendarPage.headlineAssertion();

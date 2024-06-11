@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="TelekomLab">
+        <classes>
+            <class name="org.week3.CalendarTest">
+                <methods>
+                    <include name="calendarTest"/>
+                </methods>
+            </class>
+            <class name="org.week3.FileUploadTest">
+                <methods>
+                    <include name="fileUploadTest"/>
+                </methods>
+            </class>
+            <class name="org.week3.FormFillTest">
+                <methods>
+                    <include name="formFillTest"/>
+                </methods>
+            </class>
+            <class name="org.week3.IframeTest">
+                <methods>
+                    <include name="iframeTest"/>
+                </methods>
+            </class>
+            <class name="org.week3.ModalsTest">
+                <methods>
+                    <include name="modalsTest"/>
+                </methods>
+            </class>
+            <class name="org.week3.PopUpTest">
+                <methods>
+                    <include name="popUpTest"/>
+                </methods>
+            </class>
+            <class name="org.week3.SliderTest">
+                <methods>
+                    <include name="sliderTest"/>
+                </methods>
+            </class>
+            <class name="org.week3.WindowsOperationTest">
+                <methods>
+                    <include name="windowsOperationTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

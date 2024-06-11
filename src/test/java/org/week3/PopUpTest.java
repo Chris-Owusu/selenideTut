@@ -13,8 +13,6 @@ public class PopUpTest extends BaseTest {
 
     @Test
     public void popUpTest() {
-
-        assertEquals(WebDriverRunner.url(), "https://practice-automation.com/");
         popUpPage.popUpBtn().click();
         assertTrue(WebDriverRunner.url().contains("popups/"));
 

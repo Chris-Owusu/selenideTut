@@ -13,7 +13,6 @@ public class IframeTest extends BaseTest {
 
     @Test
     public void iframeTest() {
-        assertEquals(WebDriverRunner.url(), "https://practice-automation.com/");
         iframePage.iframesBtn().click();
         assertTrue(WebDriverRunner.url().contains("iframes/"));
         iframePage.switchToFirstFrame();
@@ -24,8 +23,9 @@ public class IframeTest extends BaseTest {
         iframePage.assertSearchResult();
         iframePage.switchToDefaultContent();
         iframePage.switchToSecondFrame();
-        iframePage.clickSponsorBtn().click();
-        iframePage.assertSponsorText();
+        iframePage.clickDocumentationBtn().click();
+        iframePage.assertDocsText();
         iframePage.switchToDefaultContent();
+        iframePage.assertAboutLink();
     }
 }

@@ -12,8 +12,6 @@ public class TablesTest extends BaseTest {
 
     @Test
     public void tablesTest() {
-
-        assertEquals(WebDriverRunner.url(), "https://practice-automation.com/");
         tablesPage.tablesBtn().click();
         assertTrue(WebDriverRunner.url().contains("tables/"));
 

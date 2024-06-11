@@ -13,7 +13,6 @@ public class WindowsOperationTest extends BaseTest {
 
     @Test
     public void windowsOperationTest() {
-        assertEquals(url(), "https://practice-automation.com/");
         windowsOperationPage.winOpsBtn().click();
         assertTrue(url().contains("window-operations/"));
 

@@ -4,8 +4,7 @@ import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 
-import static com.codeborne.selenide.Condition.exactText;
-import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.switchTo;
 
@@ -19,8 +18,8 @@ public class IframePage {
     SelenideElement secondFrame = $("#frame1");
 
     // First frame
-    public SelenideElement switchToFirstFrame() {
-        return (SelenideElement) switchTo().frame(firstFrame);
+    public void switchToFirstFrame() {
+        switchTo().frame(firstFrame);
     }
 
     public SelenideElement loginBtnVisible() {
@@ -28,7 +27,7 @@ public class IframePage {
     }
 
     public SelenideElement closePopUp() {
-        return $(By.xpath("//button[aria-label=\"Close Message\"]"));
+        return $(By.xpath("//button[text()=\"OK\"]"));
     }
 
     public SelenideElement clickSearchBtn() {
@@ -44,23 +43,29 @@ public class IframePage {
     }
 
     // Switch back to main content page
-    public SelenideElement switchToDefaultContent() {
-        return (SelenideElement) switchTo().defaultContent();
+    public void switchToDefaultContent() {
+        switchTo().defaultContent();
     }
 
     // Second frame
-    public SelenideElement switchToSecondFrame() {
-        return (SelenideElement) switchTo().frame(secondFrame);
+    public void switchToSecondFrame() {
+        switchTo().frame(secondFrame);
     }
 
-    public SelenideElement clickSponsorBtn() {
-        return $(By.xpath("//a[@href=\"/sponsor\"]"));
+    public SelenideElement clickDocumentationBtn() {
+        return $(By.xpath("//span[text()=\"Documentation\"]"));
     }
 
-    public SelenideElement assertSponsorText() {
-        return $(By.xpath("//h1[text()=\"Sponsors\"]"))
+    public SelenideElement assertDocsText() {
+        return $(".td-content h1")
                 .shouldBe(visible)
-                .shouldHave(exactText("Sponsors"));
+                .shouldHave(text("The Selenium Browser Automation Project"));
+    }
+
+    public SelenideElement assertAboutLink() {
+        return $(By.xpath("//a[text()='About']"))
+                .shouldBe(visible)
+                .shouldHave(text("About"));
     }
 
 }

@@ -12,7 +12,6 @@ public class ModalsTest extends BaseTest {
 
     @Test
     public void modalsTest() {
-        assertEquals(WebDriverRunner.url(), "https://practice-automation.com/");
         modalsPage.modalsBtn().click();
         assertTrue(WebDriverRunner.url().contains("modals/"));
         modalsPage.simpleModalBtn().click();

@@ -12,7 +12,6 @@ public class FileUploadTest extends BaseTest {
 
     @Test
     public void fileUploadTest() {
-        assertEquals(WebDriverRunner.url(), "https://practice-automation.com/");
         fileUploadPage.fileUploadBtn().click();
         assertTrue(WebDriverRunner.url().contains("file-upload/"));
         fileUploadPage.uploadFile("C://Users//ChristopherOwusuAhen//Downloads//meme18.png");

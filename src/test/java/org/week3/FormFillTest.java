@@ -10,7 +10,6 @@ public class FormFillTest extends BaseTest {
     FormFilePage formFilePage = new FormFilePage();
     @Test
     public void formFillTest() {
-        assertTrue(WebDriverRunner.url().contains("practice-automation.com/"));
         formFilePage.formFillBtn().click();
         assertTrue(WebDriverRunner.url().contains("form-fields/"));
         formFilePage.formFillNameField("Vick");

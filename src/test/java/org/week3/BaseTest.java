@@ -2,10 +2,12 @@ package org.week3;
 
 
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.WebDriverRunner;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import static com.codeborne.selenide.Selenide.*;
+import static org.testng.Assert.assertEquals;
 
 public class BaseTest {
 
@@ -18,6 +20,7 @@ public class BaseTest {
 
         // Open the base URL before each test
         open("https://practice-automation.com/");
+        assertEquals(WebDriverRunner.url(), "https://practice-automation.com/");
     }
 
     @AfterMethod

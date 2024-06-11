@@ -19,7 +19,7 @@ public class IframeTest extends BaseTest {
     }
 
     @Test(priority = 1)
-    public void iframeTest() {
+    public void firstIframe() {
         iframePage.switchToFirstFrame();
         iframePage.loginBtnVisible();
         iframePage.closePopUp().click();
@@ -30,7 +30,7 @@ public class IframeTest extends BaseTest {
     }
 
     @Test(priority = 2)
-    public void secondFrame() {
+    public void secondIframe() {
         iframePage.switchToSecondFrame();
         iframePage.clickDocumentationBtn().click();
         iframePage.assertDocsText();

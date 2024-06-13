@@ -1,11 +1,6 @@
 pipeline {
     agent any
 
-    tools {
-        maven 'Maven 3.9.1' // Replace with your Maven version
-        jdk 'JDK 20' // Replace with your JDK version
-    }
-
     stages {
         stage('Set Console Code Page') {
             steps {

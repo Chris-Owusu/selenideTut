@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <parameter name="date" value="2024-06-06"></parameter>
+    <test verbose="2" preserve-order="true" name="C:/new/selenidePOM/src/test/java/org/week3">
+        <classes>
+            <class name="org.week3.CalendarTest">
+                <methods>
+                    <include name="calendarTest"/>
+                </methods>
+            </class>
+            <class name="org.week3.FileUploadTest">
+                <methods>
+                    <include name="fileUploadTest"/>
+                </methods>
+            </class>
+            <class name="org.week3.FormFillTest">
+                <methods>
+                    <include name="formFillTest"/>
+                </methods>
+            </class>
+            <class name="org.week3.IframeTest">
+                <methods>
+                    <include name="firstIframe"/>
+                    <include name="secondIframe"/>
+                </methods>
+            </class>
+            <class name="org.week3.ModalsTest">
+                <methods>
+                    <include name="simpleModalsTest"/>
+                    <include name="formModalTest"/>
+                </methods>
+            </class>
+            <class name="org.week3.PopUpTest">
+                <methods>
+                    <include name="alertPopupTest"/>
+                    <include name="confirmPopupTest"/>
+                    <include name="promptPopupTest"/>
+                </methods>
+            </class>
+            <class name="org.week3.SliderTest">
+                <methods>
+                    <include name="sliderTest"/>
+                </methods>
+            </class>
+            <class name="org.week3.TablesTest">
+                <methods>
+                    <include name="simpleTablesTest"/>
+                    <include name="sortableTablesTest"/>
+                </methods>
+            </class>
+            <class name="org.week3.WindowsOperationTest">
+                <methods>
+                    <include name="windowsOperationTest"/>
+                    <include name="replaceWin"/>
+                    <include name="newWin"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

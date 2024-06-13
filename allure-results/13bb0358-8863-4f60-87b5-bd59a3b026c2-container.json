@@ -1,0 +1,1 @@
+{"uuid":"13bb0358-8863-4f60-87b5-bd59a3b026c2","name":"org.week3.BaseTest.setUp","children":["7917af90-b6bb-4f37-8ab5-49a04815709f"],"description":"","befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1718123398673,"stop":1718123403052}],"afters":[],"start":1718123398672,"stop":1718123403053}

@@ -1,0 +1,1 @@
+{"uuid":"23335cf1-ff61-482b-b50d-19c3467a4058","name":"org.week3.BaseTest.tearDown","children":["e9fe5774-a6ca-4555-94cf-94c1ee886e8c"],"description":"","befores":[],"afters":[{"name":"tearDown","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1718123505046,"stop":1718123505365}],"start":1718123505046,"stop":1718123505365}

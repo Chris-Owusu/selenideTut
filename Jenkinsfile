@@ -39,19 +39,4 @@ pipeline {
             }
         }
     }
-
-    post {
-        success {
-            echo 'Build completed successfully!'
-            // Add additional success actions, e.g., notifications
-        }
-        failure {
-            echo 'Build failed!'
-            // Add additional failure actions, e.g., notifications
-        }
-        always {
-            echo 'Cleaning up...'
-            cleanWs()
-        }
-    }
 }

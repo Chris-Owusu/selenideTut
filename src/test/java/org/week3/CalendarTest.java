@@ -12,12 +12,11 @@ public class CalendarTest extends BaseTest {
     CalendarPage calendarPage = new CalendarPage();
 
     @Test
-    @Parameters("date")
-    public void calendarTest(String date) {
+    public void calendarTest() {
         calendarPage.calendarBtn().click();
         assertTrue(WebDriverRunner.url().contains("calendars/"));
         calendarPage.headlineAssertion();
-        calendarPage.enterDate(date);
+        calendarPage.enterDate("2024-06-06");
         calendarPage.calendarSubmitBtn().click();
         calendarPage.calendarSuccessMss();
         calendarPage.assertDateIsCorrect();

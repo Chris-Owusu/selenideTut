@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-    <parameter name="date" value="2024-06-06"></parameter>
     <test verbose="2" preserve-order="true" name="C:/new/selenidePOM/src/test/java/org/week3">
         <classes>
             <class name="org.week3.CalendarTest">

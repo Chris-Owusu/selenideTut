@@ -29,7 +29,7 @@ pipeline {
         stage('Testing') {
             steps {
                 echo "Running tests"
-                bat "mvn verify -P headless"
+                bat "mvn verify"
             }
         }
         stage('Deploying') {

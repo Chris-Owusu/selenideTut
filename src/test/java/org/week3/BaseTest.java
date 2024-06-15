@@ -17,6 +17,7 @@ public class BaseTest {
         Configuration.browser = "chrome";
 //        Configuration.browserSize = "1920x1080";
         Configuration.timeout = 10000;
+        Configuration.headless = true;
 
         // Open the base URL before each test
         open("https://practice-automation.com/");
